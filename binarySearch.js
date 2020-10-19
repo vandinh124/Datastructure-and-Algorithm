@@ -16,6 +16,4 @@ function binarySearch(arr,num){
     }
     return arr[middle] == num ? middle : -1;
 }
-
 console.log(binarySearch([1,2,3,4,5,6], 8))
-//not for the case cant find num in the array
