@@ -17,7 +17,7 @@ function selectionSort(arr){
     }
     return arr;
 }
-//ES5
+// ES5
 // function selectionSort(arr){
 //     for (var i = 0; i < arr.length; i++){
 //         var lowest = i;
