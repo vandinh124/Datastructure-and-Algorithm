@@ -6,6 +6,8 @@ function anagram(str1, str2){
     for (let i = 0; i< str1.length; i++){
         let letter = str1[i];
         //if letter exists, increment, otherwise set to 1
+        console.log("letter", letter);
+        console.log("lookup[letter] of", letter, lookup[letter])
         lookup[letter] ? lookup[letter] +=1 : lookup[letter] = 1;
     }
     console.log(lookup)
