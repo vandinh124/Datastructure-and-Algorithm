@@ -23,13 +23,29 @@ class Graph{
             v => v !== vertex1
         );
     }
+
+    removeVertex(vertex){
+        while(this.adjacenyList[vertex].length){
+            const adjacentVertex = this.adjacenyList[vertex].pop()
+            this.removeEdge(vertex, adjacentVertex)
+        }
+        delete this.adjacenyList[vertex]
+    }
 }
 
 g = new Graph();
-g.addVertex("Tokyo")
-g.addVertex("San Jose")
 g.addVertex("Dallas")
+g.addVertex("Tokyo")
+g.addVertex("Aspen")
+g.addVertex("Los Angeles")
+g.addVertex("Hong Kong")
 g.addEdge("Tokyo", "Dallas")
+g.addEdge("Aspen", "Dallas")
+g.addEdge("Hong Kong", "Tokyo")
+g.addEdge("Hong Kong", "Dallas")
+g.addEdge("Los Angeles", "Hong Kong")
+g.addEdge("Los Angeles", "Aspen")
 // g.adjacenyList["Tokyo"].push("Something")
-g.removeEdge("Tokyo", "Dallas")
+g.removeVertex("Hong Kong")
+
 console.log(g)
